@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow: hidden;
+}
+.GameContainer{
+ 
+  background-image: url(background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  width: 100%;
+  height: 100vh;
+}
+.dino{
+    background-image: url(dino.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 190px;
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+}
+.villan{
+    background-image: url(villan.png);
+    width: 190px;
+    height: 280px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    
+
+}
+.animateDino{
+    animation: dino;
+    animation-timing-function: linear;
+    animation-duration: 0.7s;
+    transform: all;
+}
+.villani{
+    animation: villaniya;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes dino {
+    0%{
+        bottom: 0px;
+        
+    }
+    50%{
+        bottom: 500px;
+    }
+    100%{
+        bottom: 0px;
+    }
+}
+
+@keyframes villaniya{
+    0%{
+        left: 100vw;       
+    }
+     100%{
+        left: -10vw;
+    }
+}
+.gameOver{
+    display: flex;
+    visibility: hidden;
+    color: black;
+    background-color: azure;
+    font-weight: bolder;
+    font-size: 60px;
+    animation: game_over;
+    animation-duration: 0.6s;
+    animation-timing-function: linear;
+    animation-iteration-count: unset;
+    animation-fill-mode: forwards;
+    transform: all;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    
+    
+}
+
+#ScoreCounter{
+    background-color: rgb(21, 168, 209);
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    position: relative;
+    margin: auto;
+    width: 400px;
+    padding: 4px;
+    top: 10px;
+  
+}
+@keyframes game_over {
+  0%{
+    background-color: rgb(239, 248, 248);
+    top: 100px;
+    text-align: center;
+    height: 200px;
+    width: 700px;
+  } 
+  100%{  
+    background-color: rgb(239, 248, 248);
+    top: 100px;
+    text-align: center;
+    height: 200px;
+    width: 700px;
+  } 
+
+
+}
